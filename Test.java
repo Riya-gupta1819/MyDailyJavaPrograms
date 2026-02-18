@@ -1,32 +1,24 @@
-package com.riya.cons.basic;
-
- class Animal{
-	String name;
-	
-	Animal(String name)
-	{
-		this.name = name;
-	}
-	
-}
- class Cat extends Animal
- {
-
-	public Cat(String name) 
-	{
-		super(name);
-		this.name=name;
-	}
-	
-	
-}
+package com.riya.staticc;
 
 public class Test {
+	
+	int x = 0;
+	static int y = 1;
+	
+	void display() {
+		System.out.println("Static "+y);
+		System.out.println("Instant "+x);
+	}
 
 	public static void main(String[] args) {
-		Animal a = new Animal("cat");
-		System.out.println(a.name);
+		Test d1 = new Test();
+		d1.display();
 		
+		Test d2 = new Test();
+		d2.display();
+		
+		Test d3 = new Test();
+		d3.display();
 
 	}
 
