@@ -1,21 +1,40 @@
-package com.riya.equals;
+package com.riya.cons.basic;
 
 public class Student {
 	
-	 int id;
-	    Student(int id) { this.id = id; }
+	int rollNo;
+    String name;
+    double marks;
 
-	    @Override
-	    public boolean equals(Object o) {
-	        Student s = (Student) o;
-	        return this.id == s.id;
-	    }
+    // Default constructor
+    Student() {
+        this(101);   // calling parameterized constructor
+        System.out.println("Default Constructor Called");
+    }
+
+    // Constructor with one parameter
+    Student(int rollNo) {
+        this(rollNo, "Riya");  // calling another constructor
+        System.out.println("One-Parameter Constructor Called");
+    }
+
+    // Constructor with two parameters
+    Student(int rollNo, String name) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = 85.5;
+        System.out.println("Two-Parameter Constructor Called");
+    }
+
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + marks);
+    }
 
 	public static void main(String[] args) {
-		Student s1 = new Student(1);
-        Student s2 = new Student(1);
-        System.out.println(s1.equals(s2));
-
+		  Student s = new Student();
+	        s.display();
 	}
 
 }
