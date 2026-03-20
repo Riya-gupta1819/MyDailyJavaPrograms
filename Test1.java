@@ -1,25 +1,24 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Demo {
+
+    static {
+        System.out.println("Static block executed");
+    }
+
+    Demo() {
+        System.out.println("Constructor executed");
+    }
+}
 
 public class Test1 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		System.out.println("Main method started");
 
-        System.out.print("Enter value of N: ");
-        int n = sc.nextInt();
+        Demo obj = new Demo();
 
-        int sum = 0;
-
-        for(int i = 1; i <= n; i++) {
-            System.out.print("Enter number: ");
-            int num = sc.nextInt();
-
-            sum = sum + num;
-        }
-
-        System.out.println("Sum = " + sum);
+        System.out.println("Main method ended");
 
 	}
 
