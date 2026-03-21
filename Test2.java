@@ -1,20 +1,24 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Memo {
+
+    static {
+        System.out.println("Static block executed");
+    }
+
+    static void show() {
+        System.out.println("Static method called");
+    }
+}
 
 public class Test2 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		System.out.println("Main method started");
 
-        System.out.print("Enter a sentence: ");
-        String sentence = sc.nextLine();
+        Memo.show();   // calling static method (no object)
 
-        String[] words = sentence.split(" ");
-
-        int count = words.length;
-
-        System.out.println("Number of words = " + count);
+        System.out.println("Main method ended");
 
 	}
 
