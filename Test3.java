@@ -1,21 +1,28 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Parent {
+
+    static {
+        System.out.println("Parent static block");
+    }
+}
+
+class Child extends Parent {
+
+    static {
+        System.out.println("Child static block");
+    }
+}
 
 public class Test3 {
 
 	public static void main(String[] args) {
-		
+		 System.out.println("Main method");
 
-	        Scanner sc = new Scanner(System.in);
+	        Child obj = new Child();  
 
-	        System.out.print("Enter a string: ");
-	        String str = sc.nextLine();
-
-	        for(int i = str.length() - 1; i >= 0; i--) {
-	            System.out.print(str.charAt(i));
+	    }
 
 	}
 
-}
-}
+
