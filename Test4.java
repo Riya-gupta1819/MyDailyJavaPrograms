@@ -1,26 +1,28 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Demo {
+
+    static {
+        System.out.println("Static Block 1");
+    }
+
+    static {
+        System.out.println("Static Block 2");
+    }
+
+    static {
+        System.out.println("Static Block 3");
+    }
+}
 
 public class Test4 {
 
-    static void reverse(String str, int i) {
+	public static void main(String[] args) {
+		System.out.println("Main method");
 
-        if (i < 0) {   // base condition
-            return;
-        }
+        Demo obj = new Demo();   // object create
 
-        System.out.print(str.charAt(i));
-        reverse(str, i - 1);   // recursive call
-    }
 
-    public static void main(String[] args) {
+	}
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a string: ");
-        String str = sc.nextLine();
-
-        reverse(str, str.length() - 1);
-    }
 }
