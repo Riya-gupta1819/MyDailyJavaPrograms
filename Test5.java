@@ -1,37 +1,28 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Student {
+
+    int id;
+    String name;
+
+    void setData(int id, String name) {
+        this.id = id;       // current object ka id
+        this.name = name;   // current object ka name
+    }
+
+    void display() {
+        System.out.println("ID: " + this.id);
+        System.out.println("Name: " + this.name);
+    }
+}
 
 public class Test5 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		 Student s1 = new Student();
+	        s1.setData(101, "Riya");
 
-        int max, min;
-
-        System.out.print("Enter number 1: ");
-        int num = sc.nextInt();
-
-        max = num;
-        min = num;
-
-        for(int i = 2; i <= 5; i++) {
-            System.out.print("Enter number " + i + ": ");
-            num = sc.nextInt();
-
-            if(num > max) {
-                max = num;
-            }
-
-            if(num < min) {
-                min = num;
-            }
-        }
-
-        System.out.println("Maximum = " + max);
-        System.out.println("Minimum = " + min);
-
+	        s1.display();
 	}
 
 }
-
