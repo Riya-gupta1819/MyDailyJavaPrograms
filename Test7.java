@@ -1,29 +1,22 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Animal {
+}
+
+class Dog extends Animal {
+}
 
 public class Test7 {
 
 	public static void main(String[] args) {
-		 Scanner sc = new Scanner(System.in);
-	        System.out.print("Enter a string: ");
-	        String str = sc.nextLine();
+		 Dog d = new Dog();
 
-	        for(int i = 0; i < str.length(); i++) {
+	        if (d instanceof Dog) {
+	            System.out.println("d is instance of Dog");
+	        }
 
-	            int count = 0;
-
-	            for(int j = 0; j < str.length(); j++) {
-
-	                if(str.charAt(i) == str.charAt(j)) {
-	                    count++;
-	                }
-	            }
-
-	            if(count == 1) {
-	                System.out.println("First non-repeated character = " + str.charAt(i));
-	                break;
-	            }
+	        if (d instanceof Animal) {
+	            System.out.println("d is instance of Animal");
 	        }
 
 	}
