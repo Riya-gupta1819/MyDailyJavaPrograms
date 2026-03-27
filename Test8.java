@@ -1,28 +1,27 @@
-package com.riya.reverse;
+package com.riya.practice;
 
-import java.util.Scanner;
+class Studentt {
+
+    int id = 101;
+    String name = "Riya";
+
+    void display() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+    }
+}
 
 public class Test8 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a string: ");
-        String str = sc.nextLine();
+		Studentt s1 = new Studentt();   // object creation
 
-        boolean isDigit = true;
+        // accessing variables using dot operator
+        System.out.println("ID: " + s1.id);
+        System.out.println("Name: " + s1.name);
 
-        for(int i = 0; i < str.length(); i++) {
-
-            if(!Character.isDigit(str.charAt(i))) {
-                isDigit = false;
-                break;
-            }
-        }
-
-        if(isDigit)
-            System.out.println("String contains only digits");
-        else
-            System.out.println("String does not contain only digits");
+        // calling method using dot operator
+        s1.display();
 
 	}
 
