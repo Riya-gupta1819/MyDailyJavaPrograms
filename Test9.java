@@ -1,29 +1,33 @@
-package com.riya.reverse;
+package com.riya.practice;
 
+class Demoo {
 
-class Demo {
+    int x;
+    int y;
 
-    static int staticVar = 0;   // static variable
-    int instanceVar = 0;        // instance variable
+    // Non-static block
+    {
+        x = 10;
+        y = 20;
+        System.out.println("Non-static block executed");
+    }
 
-    void increment() {
-        staticVar++;
-        instanceVar++;
+    // Constructor
+    Demo() {
+        System.out.println("Constructor executed");
+    }
 
-        System.out.println("Static Variable: " + staticVar);
-        System.out.println("Instance Variable: " + instanceVar);
-        System.out.println();
+    void display() {
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
     }
 }
 
 public class Test9 {
 
 	public static void main(String[] args) {
-		 Demo obj1 = new Demo();
-	        Demo obj2 = new Demo();
-
-	        obj1.increment();
-	        obj2.increment();
+		 Demoo obj = new Demoo();  // object creation
+	        obj.display();
 
 	}
 
