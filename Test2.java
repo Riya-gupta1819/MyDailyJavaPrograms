@@ -1,25 +1,17 @@
-package com.riya.practice;
-
-class Memo {
-
-    static {
-        System.out.println("Static block executed");
-    }
-
-    static void show() {
-        System.out.println("Static method called");
-    }
-}
+package com.riya.perfect;
 
 public class Test2 {
+	
+
+    static int getNumber() {
+        return 100;   // returning an integer value
+    }
+
 
 	public static void main(String[] args) {
-		System.out.println("Main method started");
+		 int result = getNumber();
 
-        Memo.show();   // calling static method (no object)
-
-        System.out.println("Main method ended");
-
+	        System.out.println("Returned value = " + result);
 	}
 
 }
