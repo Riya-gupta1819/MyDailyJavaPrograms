@@ -1,28 +1,16 @@
-package com.riya.practice;
-
-class Parent {
-
-    static {
-        System.out.println("Parent static block");
-    }
-}
-
-class Child extends Parent {
-
-    static {
-        System.out.println("Child static block");
-    }
-}
+package com.riya.perfect;
 
 public class Test3 {
+	 static int multiply(int a, int b) {
+	        int result = a * b;   // calculation
+	        return result;        // return result
+	    }
 
 	public static void main(String[] args) {
-		 System.out.println("Main method");
+		int value = multiply(5, 4);
 
-	        Child obj = new Child();  
-
-	    }
+        System.out.println("Result = " + value);
 
 	}
 
-
+}
