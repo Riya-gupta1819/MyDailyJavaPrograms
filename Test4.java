@@ -1,26 +1,15 @@
-package com.riya.practice;
-
-class Demo {
-
-    static {
-        System.out.println("Static Block 1");
-    }
-
-    static {
-        System.out.println("Static Block 2");
-    }
-
-    static {
-        System.out.println("Static Block 3");
-    }
-}
+package com.riya.perfect;
 
 public class Test4 {
+	
+	static int getValue() {
+        return 50;   // returning an integer
+    }
 
 	public static void main(String[] args) {
-		System.out.println("Main method");
+        int result = getValue();  // method call
 
-        Demo obj = new Demo();   // object create
+        System.out.println("Returned value = " + result);
 
 
 	}
