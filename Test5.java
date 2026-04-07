@@ -1,28 +1,50 @@
-package com.riya.practice;
+package com.riya.perfect;
 
-class Student {
+class Dem {
 
-    int id;
-    String name;
-
-    void setData(int id, String name) {
-        this.id = id;       // current object ka id
-        this.name = name;   // current object ka name
+    // Static block
+    static {
+        System.out.println("Static Block 1");
     }
 
+    static {
+        System.out.println("Static Block 2");
+    }
+
+    // Non-static block
+    {
+        System.out.println("Non-Static Block 1");
+    }
+
+    {
+        System.out.println("Non-Static Block 2");
+    }
+
+    // Constructor
+    Dem() {
+        System.out.println("Constructor executed");
+    }
+
+    // Method
     void display() {
-        System.out.println("ID: " + this.id);
-        System.out.println("Name: " + this.name);
+        System.out.println("Method executed");
     }
 }
 
 public class Test5 {
 
 	public static void main(String[] args) {
-		 Student s1 = new Student();
-	        s1.setData(101, "Riya");
+		 System.out.println("Main method started");
 
-	        s1.display();
+	        Dem obj1 = new Dem();   // first object
+	        obj1.display();
+
+	        System.out.println("-----");
+
+	        Dem obj2 = new Dem();   // second object
+	        obj2.display();
+
+	        System.out.println("Main method ended");
 	}
 
 }
