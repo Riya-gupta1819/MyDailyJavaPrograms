@@ -1,23 +1,26 @@
-package com.riya.practice;
+package com.riya.perfect;
 
-class Student1 {
+class Counter {
 
-    void study() {
-        System.out.println("Student is studying");
+    static int count = 0;   // static variable
+
+    Counter() {
+        count++;   // increment when object is created
     }
 
-    void play() {
-        System.out.println("Student is playing");
+    void display() {
+        System.out.println("Total objects created = " + count);
     }
 }
 
 public class Test6 {
 
 	public static void main(String[] args) {
-		Student1 s1 = new Student1();   // object creation using new
+		Counter obj1 = new Counter();
+        Counter obj2 = new Counter();
+        Counter obj3 = new Counter();
 
-        s1.study();   // method call
-        s1.play();    // method call
+        obj1.display();
 
 	}
 
