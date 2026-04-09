@@ -1,23 +1,32 @@
-package com.riya.practice;
+package com.riya.perfect;
 
-class Animal {
-}
+class Domo {
 
-class Dog extends Animal {
+    static int count = 10;   // static variable
+
+    void show() {
+        System.out.println("Count = " + count);
+    }
 }
 
 public class Test7 {
 
 	public static void main(String[] args) {
-		 Dog d = new Dog();
+		 Domo obj1 = new Domo();
+	        Domo obj2 = new Domo();
 
-	        if (d instanceof Dog) {
-	            System.out.println("d is instance of Dog");
-	        }
+	        // initial values
+	        obj1.show();
+	        obj2.show();
 
-	        if (d instanceof Animal) {
-	            System.out.println("d is instance of Animal");
-	        }
+	        System.out.println("---- After Modification ----");
+
+	        // modify using obj1
+	        obj1.count = 50;
+
+	        // check values again
+	        obj1.show();
+	        obj2.show();
 
 	}
 
